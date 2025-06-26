@@ -176,7 +176,7 @@ To visualize model performance
 
 ### LIDAR sensor analysis
 
-The inclusion of LIDAR does not universally lead to improved results. While it provides richer environmental data, it also increases the dimensionality of the input, which can mamke learning slower and less stable, especially for methods that do not scale well with input complexity. In some cases, agents without LIDAR performed similar or even better, depending on the algorithm used and the task.Add commentMore actions
+The inclusion of LIDAR does not universally lead to improved results. While it provides richer environmental data, it also increases the dimensionality of the input, which can mamke learning slower and less stable, especially for methods that do not scale well with input complexity. In some cases, agents without LIDAR performed similar or even better, depending on the algorithm used and the task.
 
 ### Final veredict
 
