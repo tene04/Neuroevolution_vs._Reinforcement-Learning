@@ -23,13 +23,14 @@ It includes detailed analysis, visualizations and pre-trained models.
 
 |    Method                    |    5 episodes average reward    |    Training time    |
 |------------------------------|:-------------------------------:|:-------------------:|
-|    Neuroevolution            |                                 |    ~3.5 hours       |
-|    Neuroevolution + LIDAR    |                                 |    ~14.6 hours      |
-|    Deep Q-Learning           |                                 |    ~1 hour          |
-|    Deep Q-Learning + LIDAR   |                                 |    ~24 minutes      |
+|    Neuroevolution            |              75.3               |    ~3.5 hours       |
+|    Neuroevolution + LIDAR    |              88.6               |    ~14.6 hours      |
+|    Deep Q-Learning           |              12.9               |    ~4 hours         |
+|    Deep Q-Learning + LIDAR   |              272.6              |    ~24 minutes      |
 
 ### Key findings: 
-  * DQL outperforms Neuroevolution in performance and training time.
+  * DQL outperforms Neuroevolution in performance and training time without LIDAR.
+  * Neuroevolution with LIDAR achieves better results but requires significantly more training time 
   * LIDAR does not always improve results since it increases the computational complexity
 
 
@@ -139,12 +140,14 @@ Is an evolutionary algorithm that optimizes neural networks through simulated ev
 ## Visualizations
 
 ### Neuroevolution training progress
-
+![neo][images/neuro_lidar]
+![neo][images/neuro]
 * Tracks maximun and average fitness across generations
 * Shows evolutionary convergence patterns
 
 ### DQL training progress
-
+![dql][images/dql_lidar]
+![dql][images/dql]
 * Display reward per episode and lass 100 rewards mean
 * Includes epsilon-decay progress
 
@@ -162,15 +165,14 @@ To visualize model performance
 
 ### Performance comparison
 
-* Deel Q-Learning is more eficient in time and performance for Flappy Bird.
-* Neuroevolution is easier to implement and is more robust to hyperparameters but less scalable
+* DQL demostrates superior performance and faster convergence compared to Neuroevolution when no LIDAR sensor is used. This suggests that DQL is more sample-efficient and better suited for environments with limited sensory input.
+* Neuroevolution combined with LIDAR achieves better overall performance, particularly in complex environment where additional spatial information enhances the agent´s decision. However, this improvement comes at a hight computational cost, as training times increase significantly due to the large input space.
 
 ### LIDAR sensor analysis
 
-* Might provides richer environmental data and enables more sophisticated obstacles detection
-* In this case, increased training time without score improvement.
+The inclusion of LIDAR does not universally lead to improved results. While it provides richer environmental data, it also increases the dimensionality of the input, which can mamke learning slower and less stable, especially for methods that do not scale well with input complexity. In some cases, agents without LIDAR performed similar or even better, depending on the algorithm used and the task.
 
-Final veredict
--
-While both methods successfully solve Flappy Bird, DQL demosrtates superior time efficiency and final performance, making it better suited for this particular environment
+### Final veredict
+
+While both methods can successfully solve Flappy Bird, DQL demostrates superior time efficiency and final performance withou LIDAR, making it better suited for this particular environment
 
