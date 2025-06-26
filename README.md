@@ -142,9 +142,9 @@ Is an evolutionary algorithm that optimizes neural networks through simulated ev
 
 ### Neuroevolution training progress
 
-![neo](images/neuro_lidar.png)
+![neo](images/neo_lidar.png)
 
-![neo](images/neuro.png)
+![neo](images/neo.png)
 * Tracks maximun and average fitness across generations
 * Shows evolutionary convergence patterns
 
