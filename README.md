@@ -142,17 +142,17 @@ Is an evolutionary algorithm that optimizes neural networks through simulated ev
 
 ### Neuroevolution training progress
 
-![neo][images/neuro_lidar]
+![neo][images/neuro_lidar.png]
 
-![neo][images/neuro]
+![neo][images/neuro.png]
 * Tracks maximun and average fitness across generations
 * Shows evolutionary convergence patterns
 
 ### DQL training progress
 
-![dql][images/dql_lidar]
+![dql][images/dql_lidar.png]
 
-![dql][images/dql]
+![dql][images/dql.png]
 * Display reward per episode and lass 100 rewards mean
 * Includes epsilon-decay progress
 
