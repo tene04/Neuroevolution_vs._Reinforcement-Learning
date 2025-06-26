@@ -142,17 +142,17 @@ Is an evolutionary algorithm that optimizes neural networks through simulated ev
 
 ### Neuroevolution training progress
 
-![neo][images/neuro_lidar.png]
+![neo](images/neuro_lidar.png)
 
-![neo][images/neuro.png]
+![neo](images/neuro.png)
 * Tracks maximun and average fitness across generations
 * Shows evolutionary convergence patterns
 
 ### DQL training progress
 
-![dql][images/dql_lidar.png]
+![dql](images/dql_lidar.png)
 
-![dql][images/dql.png]
+![dql](images/dql.png)
 * Display reward per episode and lass 100 rewards mean
 * Includes epsilon-decay progress
 
@@ -171,7 +171,7 @@ To visualize model performance
 
 ### Performance comparison
 
-* DQL demostrates superior performance and faster convergence compared to Neuroevolution when no LIDAR sensor is used. This suggests that DQL is more sample-efficient and better suited for environments with limited sensory input.Add commentMore actions
+* DQL demostrates superior performance and faster convergence compared to Neuroevolution when no LIDAR sensor is used. This suggests that DQL is more sample-efficient and better suited for environments with limited sensory 
 * Neuroevolution combined with LIDAR achieves better overall performance, particularly in complex environment where additional spatial information enhances the agent´s decision. However, this improvement comes at a hight computational cost, as training times increase significantly due to the large input space.
 
 ### LIDAR sensor analysis
