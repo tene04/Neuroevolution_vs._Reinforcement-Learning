@@ -25,8 +25,8 @@ It includes detailed analysis, visualizations and pre-trained models.
 |------------------------------|:-------------------------------:|:-------------------:|
 |    Neuroevolution            |              75.3               |    ~3.5 hours       |
 |    Neuroevolution + LIDAR    |              88.6               |    ~14.6 hours      |
-|    Deep Q-Learning           |              12.9               |    ~4 hours         |
-|    Deep Q-Learning + LIDAR   |              272.6              |    ~24 minutes      |
+|    Deep Q-Learning           |              272.6              |    ~24 minutes      |
+|    Deep Q-Learning + LIDAR   |              12.9               |    ~4 hours         |
 
 ### Key findings:
 
@@ -100,10 +100,10 @@ This method combines Q-learning with deep neural networks, it consist in:
 
 ### Neuroevolution
 
-Is an evolutionary algorithm that optimizes neural networks through simulated evoulion, it has: 
+Is an evolutionary algorithm that optimizes neural networks through simulated evolution, it has: 
   * Population-based: Maintains a number of different neural networks (individuals) that compete simultaneously.
   * Elite selection: Each generation, the top x individuals with highes performance survive, preserving successful traits.
-  * Gaussian mutation: The survive individuals has a certain chance for any given weight to mutate. The mutation strenght is proportional to the weight´s magnitude plus a small noise. This helps to explore news solutions while maintaining useful features.
+  * Gaussian mutation: The survive individuals has a certain chance for any given weight to mutate. The mutation strength is proportional to the weight´s magnitude plus a small noise. This helps to explore news solutions while maintaining useful features.
 
 | Aspect         |    DQL                             |    Neuroevolution               |
 |----------------|:----------------------------------:|:-------------------------------:|
@@ -124,16 +124,16 @@ Is an evolutionary algorithm that optimizes neural networks through simulated ev
 
 * eps: Initial epsilon for epsilon-greedy exploration
 * eps_decay: Factor by which epsilon decays
-* eps_min: Minimun value for epsilon
+* eps_min: Minimum value for epsilon
 * gamma: Discount factor for future rewards
 * lr: Learning rate
 * batch_size: Mini-batch size used in experience replay
 * nsr: Number of steps before updating the target networks
-* memory_max_len: Maximun size of the buffer
+* memory_max_len: Maximum size of the buffer
 
 ### Neuroevolution
 
-* elite_fraction: Porcentage of best agents preserved for next generation
+* elite_fraction: Percentage of best agents preserved for next generation
 * pmut: Mutation probability
 * N: Population size
 
@@ -153,7 +153,7 @@ Is an evolutionary algorithm that optimizes neural networks through simulated ev
 ![dql](images/dql_lidar.png)
 
 ![dql](images/dql.png)
-* Display reward per episode and lass 100 rewards mean
+* Display reward per episode and last 100 episodes average
 * Includes epsilon-decay progress
 
 
@@ -171,12 +171,12 @@ To visualize model performance
 
 ### Performance comparison
 
-* DQL demostrates superior performance and faster convergence compared to Neuroevolution when no LIDAR sensor is used. This suggests that DQL is more sample-efficient and better suited for environments with limited sensory 
+* DQL demonstrates superior performance and faster convergence compared to Neuroevolution when no LIDAR sensor is used. This suggests that DQL is more sample-efficient and better suited for environments with limited sensory 
 * Neuroevolution combined with LIDAR achieves better overall performance, particularly in complex environment where additional spatial information enhances the agent´s decision. However, this improvement comes at a hight computational cost, as training times increase significantly due to the large input space.
 
 ### LIDAR sensor analysis
 
-The inclusion of LIDAR does not universally lead to improved results. While it provides richer environmental data, it also increases the dimensionality of the input, which can mamke learning slower and less stable, especially for methods that do not scale well with input complexity. In some cases, agents without LIDAR performed similar or even better, depending on the algorithm used and the task.
+The inclusion of LIDAR does not universally lead to improved results. While it provides richer environmental data, it also increases the dimensionality of the input, which can make learning slower and less stable, especially for methods that do not scale well with input complexity. In some cases, agents without LIDAR performed similar or even better, depending on the algorithm used and the task.
 
 ### Final veredict
 
